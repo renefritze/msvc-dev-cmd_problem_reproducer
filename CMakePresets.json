@@ -9,7 +9,7 @@
         {
             "name": "ubuntu-latest",
             "hidden": false,
-            "generator": "Ninja",
+            "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/build/linux-gcc-ninja",
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "gcc",
@@ -19,7 +19,7 @@
         {
             "name": "windows-latest",
             "hidden": false,
-            "generator": "Ninja",
+            "generator": "Ninja Multi-Config",
             "binaryDir": "${sourceDir}/build/windows-vs",
             "cacheVariables": {
                 "CMAKE_C_COMPILER": "cl.exe",
