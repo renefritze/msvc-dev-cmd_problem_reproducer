@@ -1,30 +1,42 @@
 {
-  "version": 3,
-  "cmakeMinimumRequired": {
-    "major": 3,
-    "minor": 10,
-    "patch": 0
-  },
-  "configurePresets": [
-    {
-      "name": "ubuntu-latest",
-      "hidden": false,
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/linux-gcc-ninja",
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++"
-      }
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 10,
+        "patch": 0
     },
-    {
-      "name": "windows-latest",
-      "hidden": false,
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/windows-vs",
-        "cacheVariables": {
-            "CMAKE_C_COMPILER": "cl.exe",
-            "CMAKE_CXX_COMPILER": "cl.exe"
+    "configurePresets": [
+        {
+            "name": "ubuntu-latest",
+            "hidden": false,
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/linux-gcc-ninja",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++"
+            }
+        },
+        {
+            "name": "windows-latest",
+            "hidden": false,
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/windows-vs",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            }
         }
-    }
-  ]
+    ],
+    "buildPresets": [
+        {
+            "name": "ubuntu-latest",
+            "configurePreset": "ubuntu-latest",
+            "hidden": false
+        },
+        {
+            "name": "windows-latest",
+            "configurePreset": "windows-latest",
+            "hidden": false
+        }
+    ]
 }
