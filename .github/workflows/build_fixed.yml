@@ -1,4 +1,4 @@
-name: CMake Build
+name: CMake Build Fixed
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         with:
             cmakeVersion: ~3.29.5
             ninjaVersion: ~1.12.1
-      - uses: ilammy/msvc-dev-cmd@v1.13.0
+      - uses: renefritze/msvc-dev-cmd@24847ef395cc1f5e04fb9e9f0b3dd1ff1db25675
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Configure CMake

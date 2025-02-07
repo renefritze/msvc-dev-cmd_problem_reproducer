@@ -7,7 +7,7 @@
   },
   "configurePresets": [
     {
-      "name": "linux",
+      "name": "ubuntu-latest",
       "hidden": false,
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/linux-gcc-ninja",
@@ -17,7 +17,7 @@
       }
     },
     {
-      "name": "windows",
+      "name": "windows-latest",
       "hidden": false,
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/windows-vs",
