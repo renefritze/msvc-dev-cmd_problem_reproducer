@@ -2,11 +2,6 @@ name: CMake Build Fixed
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
